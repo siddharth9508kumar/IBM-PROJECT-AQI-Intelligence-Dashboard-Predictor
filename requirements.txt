@@ -1,0 +1,33 @@
+# =====================================================================
+# AQI Intelligence Dashboard & Predictor - Requirements
+# =====================================================================
+# Repo : https://github.com/siddharth9508kumar/IBM-PROJECT-AQI-Intelligence-Dashboard-Predictor
+#
+# Python   : 3.10 or newer (tested on Python 3.12.3)
+# Install  : pip install -r requirements.txt
+# Run      : streamlit run app.py
+#
+# Data file (not installed by pip): city_day.csv must be in the same
+# folder as app.py. Source: Air Quality Data in India (2015-2020),
+# Rohan Rao, Kaggle
+# https://www.kaggle.com/datasets/rohanrao/air-quality-data-in-india
+#
+# Version ranges: lower bound = minimum the code needs, upper bound =
+# next major release (not yet tested). The app was run end-to-end
+# (all 5 tabs + Predict button, no errors) with the versions in the
+# "tested with" comments.
+# =====================================================================
+
+# Dashboard / web app (tabs, sidebar filters, metrics, number inputs)
+streamlit>=1.30,<2.0          # tested with 1.64.0
+
+# Data loading and cleaning (read_csv, groupby/transform, dropna)
+pandas>=2.0,<4.0              # tested with 3.0.2
+numpy>=1.24,<3.0              # tested with 2.4.4
+
+# Machine learning (RandomForestRegressor, RandomForestClassifier,
+# train_test_split, LabelEncoder, r2/MAE/accuracy/F1 metrics)
+scikit-learn>=1.3,<2.0        # tested with 1.8.0
+
+# Interactive charts (plotly.express bar and line charts)
+plotly>=5.18,<8.0             # tested with 7.1.0
